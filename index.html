@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#07040e" />
+    <title>Pequeño regalo</title>
+    <meta name="description" content="Un pequeño regalo del Festival de la Luna hecho especialmente para ti." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="intro" class="intro" aria-label="Pantalla de inicio">
+        <div class="intro-art" aria-hidden="true">
+          <div class="intro-bg"></div>
+          <div class="window-sky"></div>
+          <img class="intro-stars" src="https://t.dlove.vn/assets/intro/03-stars.webp" alt="" />
+          <img class="intro-mountains" src="https://t.dlove.vn/assets/intro/04-mountains.webp" alt="" />
+          <img class="intro-frame" src="https://t.dlove.vn/assets/intro/05-window-frame.webp" alt="" />
+          <img class="intro-lantern lantern-one" src="https://t.dlove.vn/assets/intro/06-lantern-distant.webp" alt="" />
+          <img class="intro-lantern lantern-two" src="https://t.dlove.vn/assets/intro/06-lantern-distant.webp" alt="" />
+          <img class="intro-lantern lantern-three" src="https://t.dlove.vn/assets/intro/06-lantern-distant.webp" alt="" />
+          <img class="intro-lantern lantern-large" src="https://t.dlove.vn/assets/intro/06-lantern-distant.webp" alt="" />
+          <img class="intro-cloud cloud-left" src="https://t.dlove.vn/assets/intro/10-cloud-left-desktop.webp" alt="" />
+          <img class="intro-cloud cloud-right" src="https://t.dlove.vn/assets/intro/11-cloud-right-desktop.webp" alt="" />
+          <img class="intro-branch" src="https://t.dlove.vn/assets/intro/12-branch-desktop.webp" alt="" />
+          <img class="intro-rabbit" src="https://t.dlove.vn/assets/intro/11-rabbit.webp" alt="" />
+          <div class="moon-wrap">
+            <button id="moonButton" class="moon-button" type="button" aria-label="Toca la luna para comenzar">
+              <span class="moon-ring"></span>
+              <img src="https://t.dlove.vn/assets/intro/02-full-moon.webp" alt="Luna" />
+            </button>
+          </div>
+          <p class="hold-hint">Toca la luna para comenzar</p>
+        </div>
+      </section>
+
+      <section id="scene" class="scene" aria-hidden="true">
+        <div class="scene-glow"></div>
+        <div id="stars" class="stars" aria-hidden="true"></div>
+        <div id="shootingStars" class="shooting-stars" aria-hidden="true"></div>
+        <div id="fireflies" class="fireflies" aria-hidden="true"></div>
+        <div class="scene-haze haze-a"></div>
+        <div class="scene-haze haze-b"></div>
+        <div class="scene-moon" aria-hidden="true"></div>
+        <div class="far-hills" aria-hidden="true"></div>
+        <div class="scene-lantern lantern-a" aria-hidden="true"><span></span></div>
+        <div class="scene-lantern lantern-b" aria-hidden="true"><span></span></div>
+        <div class="scene-lantern lantern-c" aria-hidden="true"><span></span></div>
+        <div id="risingLanterns" class="rising-lanterns"></div>
+        <div id="floatingCards" class="floating-cards"></div>
+        <div id="fallingLoveTexts" class="falling-love-texts" aria-hidden="true"></div>
+        <div id="fallingPetals" class="falling-petals" aria-hidden="true"></div>
+        <div id="frontLanterns" class="rising-lanterns front-lanterns"></div>
+
+        <nav id="toolbar" class="toolbar" aria-label="Controles">
+          <button id="heartButton" class="round-button heart-button" type="button" aria-label="Abrir recuerdos" title="Abrir recuerdos">♥</button>
+          <button id="letterButton" class="round-button letter-button" type="button" aria-label="Abrir carta" title="Abrir carta">✉</button>
+          <button id="musicButton" class="round-button music-button" type="button" aria-label="Activar o desactivar música" title="Activar o desactivar música">
+            <span class="music-on">♫</span><span class="music-off">×</span>
+          </button>
+        </nav>
+
+        <div id="coupleView" class="couple-view" aria-hidden="true">
+          <div class="couple-veil"></div>
+          <img id="coupleImage" alt="Recuerdo de los dos" />
+          <button id="closeCouple" class="close-couple" type="button" aria-label="Cerrar foto">×</button>
+        </div>
+      </section>
+
+      <section id="letterModal" class="letter-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Carta">
+        <div class="letter-sheet">
+          <button id="closeLetter" class="letter-close" type="button" aria-label="Cerrar carta">×</button>
+          <div class="letter-copy"><p id="letterPoem" class="letter-poem"></p><p id="letterText"></p><span id="typingCursor" class="typing-cursor" aria-hidden="true"></span></div>
+          <button id="letterHeart" class="letter-heart" type="button" aria-label="Ver recuerdos">♥</button>
+        </div>
+      </section>
+    </main>
+
+    <audio id="bgMusic" loop preload="none"></audio>
+    <script src="./app.js"></script>
+  </body>
+</html>
